@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const CardsContainer = styled.section`
-  margin: 50px;
   background-color: ${({ theme }) => theme.colors.background};
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 `;

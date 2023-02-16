@@ -5,12 +5,8 @@ import ThemeByRedux from "./exercise/ThemeByRedux";
 function App() {
   return (
     <div className="App">
-      <div style={{ marginBottom: "100px" }}>
-        <ThemeByRedux></ThemeByRedux>
-      </div>
-      <div>
-        <Parent></Parent>
-      </div>
+      <ThemeByRedux></ThemeByRedux>
+      <Parent></Parent>
     </div>
   );
 }

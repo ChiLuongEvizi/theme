@@ -25,17 +25,12 @@ const Parent = () => {
   return (
     <div>
       {!loading && (
-        <>
-          <div style={{ fontSize: "40px", fontWeight: 700 }}>
-            Parent-Children
-          </div>
-          <Child theme={theme} HandleThemeChange={HandleThemeChange}></Child>
-        </>
+        <Child theme={theme} HandleThemeChange={HandleThemeChange}></Child>
       )}
 
       {loading && (
         <WrapperLoading>
-          <Loading></Loading>
+          <Loading />
         </WrapperLoading>
       )}
     </div>

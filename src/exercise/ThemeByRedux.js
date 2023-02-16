@@ -7,6 +7,7 @@ import { Header } from "../Components/Header";
 import { Loading, WrapperLoading } from "../Components/Loading";
 import Quotes from "../Components/Quotes";
 import { ThemeButton, ThemeContainer } from "../Components/ThemeSwitching";
+import { Title } from "../Components/Title";
 import { setLoading, switchMode } from "../redux/ThemeSlice";
 import { GlobalStyles } from "../Styles/GlobalStyles";
 import { blue, brown, dark, green, light, pink } from "../Styles/Theme";
@@ -34,34 +35,34 @@ const ThemeByRedux = () => {
       {!loading && (
         <ThemeProvider theme={mode}>
           <GlobalStyles />
-          <div style={{ fontSize: "40px", fontWeight: 700 }}>ThemeByRedux</div>
+          <Title>Theme by redux</Title>
           <Header>Game of Thrones Quotes</Header>
           <ThemeContainer>
             <span>Themes: </span>
             <ThemeButton
               onClick={() => HandleThemeChange(light)}
               style={{ backgroundColor: "white" }}
-            ></ThemeButton>
+            />
             <ThemeButton
               onClick={() => HandleThemeChange(dark)}
               style={{ backgroundColor: "black" }}
-            ></ThemeButton>
+            />
             <ThemeButton
               onClick={() => HandleThemeChange(blue)}
               style={{ backgroundColor: "#ADD8E6" }}
-            ></ThemeButton>
+            />
             <ThemeButton
               onClick={() => HandleThemeChange(green)}
               style={{ backgroundColor: "#084526" }}
-            ></ThemeButton>
+            />
             <ThemeButton
               onClick={() => HandleThemeChange(brown)}
               style={{ backgroundColor: "#D99A26" }}
-            ></ThemeButton>
+            />
             <ThemeButton
               onClick={() => HandleThemeChange(pink)}
               style={{ backgroundColor: "#FFC2CC" }}
-            ></ThemeButton>
+            />
           </ThemeContainer>
           <Quotes />
           <Footer>
